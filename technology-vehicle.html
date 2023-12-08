@@ -5,68 +5,103 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/favicon-32x32.png">
-  <!-- Google fonts -->
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;700&family=Bellefair&family=Barlow:wght@400;700&display=swap"
-      rel="stylesheet">
-      
-  <!-- Our custom CSS -->
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200;1,600&family=Bellefair&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=League+Spartan:wght@400;500&family=Lexend+Deca&family=Manrope:wght@600;800&family=Montserrat:wght@500&family=Mulish:wght@500&family=Open+Sans&family=Outfit:wght@300&family=Overpass:ital,wght@0,300;1,300&family=Poppins:wght@400;600&family=Red+Hat+Display:wght@500&family=Roboto:ital,wght@0,500;1,500&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Semi+Condensed:wght@500;600&family=Barlow:ital,wght@0,100;0,300;0,400;0,500;0,700;1,100;1,200;1,600&family=Bellefair&family=DM+Sans:opsz,wght@9..40,400;9..40,700&family=Epilogue:wght@500;700&family=Fraunces:opsz,wght@9..144,700&family=Hanken+Grotesk:wght@500;700&family=Inter:wght@400;700;800&family=Josefin+Sans:wght@300;400;600&family=League+Spartan:wght@400;500&family=Lexend+Deca&family=Manrope:wght@600;800&family=Montserrat:wght@500&family=Mulish:wght@500&family=Open+Sans&family=Outfit:wght@300&family=Overpass:ital,wght@0,300;1,300&family=Poppins:wght@400;600&family=Red+Hat+Display:wght@500&family=Roboto:ital,wght@0,500;1,500&family=Rubik&family=Ubuntu&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-  <title>Frontend Mentor | Space tourism website</title>
+  
+  <title>Space tourism website</title>
   <script src="script.js" defer></script>
   <script src="tab.js" defer></script>
-</head>
 
+</head>
 <body class="technology">
-  <a class="skip-to-content" href="#main">Skip to content</a>
-  <header class="primary-header flex">
+  <a class="skip-to-content sr-only" href="#main">Skip to main content</a>
+
+  <header class="primary-header flex"> 
     <div>
-      <img src="./assets/shared/logo.svg" alt="space tourism logo" class="logo">
+      <img src="./assets/shared/logo.svg" alt="space tourism" class="logo">
     </div>
     <button class="mobile-nav-toggle" aria-controls="primary-navigation"><span class="sr-only" aria-expanded="false">Menu</span></button>
     <nav>
-        <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
-            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="index.html"><span aria-hidden="true">00</span>Home</a>
-            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="destination-moon.html"><span aria-hidden="true">01</span>Destination</a>
-            <li><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="crew-commander.html"><span aria-hidden="true">02</span>Crew</a>
-            <li class="active"><a class="ff-sans-cond uppercase text-white letter-spacing-2" href="technology-vehicle.html"><span aria-hidden="true">03</span>Technology</a>
-        </ul>
-    </nav>
+      <ul id="primary-navigation" data-visible="false" class="primary-navigation underline-indicators flex">
+        <li class="active"><a class="uppercase text-white" href="index.html"><span>00</span>Home</a></li>
+        <li><a class="ff-sans-cond uppercase text-white" href="destination-moon.html"><span>01</span>Destination</a></li>
+        <li><a class="ff-sans-cond uppercase text-white" href="crew-commander.html"><span>02</span>Crew</a></li>
+        <li class="active"><a class="ff-sans-cond uppercase text-white" href="technology-vehicle.html"><span>03</span>Technology</a></li>
+        
+      </ul>
+      </nav> 
+  </header> 
+    <main id="main" class="grid-container grid-container--technology flow">
+
+ <h1 class="numbered-title"><span aria-hidden="true">03</span> Space Launch 101</h1>
+
+
+ <div class="dot-indicators column flow" role="tablist" aria-label="technology member list">
+  <button class="large-button" aria-selected="true" aria-controls="vehicle-tab" data-image="vehicle-image" role="tab" tabindex="0"><span class="sr-only">The Vehicle</span>1</button>
+  <button class="large-button" aria-selected="false" aria-controls="space-tab" data-image="space-image" role="tab" tabindex="-1"><span class="sr-only">The Space</span>2</button>
+  <button class="large-button" aria-selected="false" aria-controls="capsule-tab" data-image="capsule-image" role="tab" tabindex="-1"><span class="sr-only">The capsule</span>3</button>
+  
+</div>
+ 
+ <article class="crew-details flow" id="vehicle-tab" role="tabpanel" tabindex="0">
+  <header class="flow flow--space-small">
+ <h2 class="fs-200 ff-serif uppercase">The terminology...</h2>
+ <p class="fs-700 ff-serif uppercase">Launch vehicle</p>
   </header>
 
-
-   <main id="main" class="grid-container grid-container--technology flow">
-  
-      <h1 class="numbered-title fixed"><span aria-hidden="true">03</span>Space launch 101</h1>
- 
-      <picture>
-        <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt=""> 
-      </picture>
-
-      
-  <div class="technology-details flow" id="one-tab" role="tablist" aria-label="tech member list"> 
-    <ul class="flow jug">
-  <li><button aria-selected="true" role="tab" aria-controls="one-tab" class="technology-circle ff-sans-cond text-accent letter-spacing-2 large-button fs-200 bg-dark text-light" tabindex="0" data-image="">1</button>
-  <li><button aria-selected="true" role="tab" aria-controls="one-tab" class="technology-circle ff-sans-cond text-accent letter-spacing-2 large-button fs-200 bg-dark text-light" tabindex="0" data-image="">2</button>
- <li><button aria-selected="true" role="tab" aria-controls="one-tab" class="technology-circle ff-sans-cond text-accent letter-spacing-2 large-button fs-200 bg-dark text-light" tabindex="0" data-image="">3</button> 
-    </ul>
-</div>
-
-
-    <article class="technology-info flow" id="one-tab" tabindex="0" role="tabpanel">
-  <h2 class="fs-200 text-accent ff-sans-cond">The terminology...</h2>
- <h3 class="fs-800 ff-serif text-accent">Launch vehicle</h3>
-
- <p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
+<p>A launch vehicle or carrier rocket is a rocket-propelled vehicle used to carry a 
   payload from Earth's surface to space, usually to Earth orbit or beyond. Our 
   WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
   it's quite an awe-inspiring sight on the launch pad!</p>
+  </article>
+
+  <article hidden class="crew-details flow" id="space-tab" role="tabpanel" tabindex="0">
+    <header class="flow flow--space-small">
+   <h2 class="fs-200 ff-serif uppercase">The terminology...</h2>
+   <p class="fs-700 ff-serif uppercase">Spaceport</p>
+    </header>
+  
+  <p>A space capsule is an often-crewed spacecraft that uses a blunt-body reentry 
+    capsule to reenter the Earth's atmosphere without wings. Our capsule is where 
+    you'll spend your time during the flight. It includes a space gym, cinema, 
+    and plenty of other activities to keep you entertained.</p>
     </article>
 
- </div>
 
-   </main>
+    <article hidden class="crew-details flow" id="capsule-tab" role="tabpanel" tabindex="0">
+      <header class="flow flow--space-small">
+     <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
+     <p class="fs-700 ff-serif uppercase">Spaceport</p>
+      </header>
+    
+    <p>A spaceport or cosmodrome is a site for launching (or receiving) spacecraft, 
+      by analogy to the seaport for ships or airport for aircraft. Based in the 
+      famous Cape Canaveral, our spaceport is ideally situated to take advantage 
+      of the Earth’s rotation for launch.</p>
+      </article>
 
+
+     
+
+  <picture id="vehicle-image" class="techW">
+    <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt=""> 
+  </picture>
+
+  <picture hidden id="space-image" class="techW">
+   <img src="assets/technology/image-space-capsule-portrait.jpg" alt="">
+  </picture>
+
+  <picture hidden id="capsule-image" class="techW">
+   <img src="assets/technology/image-spaceport-portrait.jpg" alt="">
+  </picture>
+
+
+    </main>
 </body>
 </html>

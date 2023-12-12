@@ -37,11 +37,12 @@
       </ul>
       </nav> 
   </header> 
+  <div>
+    <h1 class="numbered-title win flow-small"><span aria-hidden="true">03</span> Space Launch 101</h1>
+   </div>
     <main id="main" class="grid-container grid-container--technology flow">
 
- <h1 class="numbered-title"><span aria-hidden="true">03</span> Space Launch 101</h1>
-
-
+<div class="flex">
  <div class="dot-indicators column flow" role="tablist" aria-label="technology member list">
   <button class="large-button" aria-selected="true" aria-controls="vehicle-tab" data-image="vehicle-image" role="tab" tabindex="0"><span class="sr-only">The Vehicle</span>1</button>
   <button class="large-button" aria-selected="false" aria-controls="space-tab" data-image="space-image" role="tab" tabindex="-1"><span class="sr-only">The Space</span>2</button>
@@ -49,6 +50,7 @@
   
 </div>
  
+<div>
  <article class="crew-details flow" id="vehicle-tab" role="tabpanel" tabindex="0">
   <header class="flow flow--space-small">
  <h2 class="fs-200 ff-serif uppercase">The terminology...</h2>
@@ -60,7 +62,10 @@
   WEB-X carrier rocket is the most powerful in operation. Standing 150 metres tall, 
   it's quite an awe-inspiring sight on the launch pad!</p>
   </article>
+</div>
 
+
+<div>
   <article hidden class="crew-details flow" id="space-tab" role="tabpanel" tabindex="0">
     <header class="flow flow--space-small">
    <h2 class="fs-200 ff-serif uppercase">The terminology...</h2>
@@ -72,8 +77,9 @@
     you'll spend your time during the flight. It includes a space gym, cinema, 
     and plenty of other activities to keep you entertained.</p>
     </article>
+</div>
 
-
+    <div>
     <article hidden class="crew-details flow" id="capsule-tab" role="tabpanel" tabindex="0">
       <header class="flow flow--space-small">
      <h2 class="fs-600 ff-serif uppercase">The terminology...</h2>
@@ -85,22 +91,31 @@
       famous Cape Canaveral, our spaceport is ideally situated to take advantage 
       of the Earth’s rotation for launch.</p>
       </article>
-
+    </div>
 
      
-
+<div>
   <picture id="vehicle-image" class="techW">
     <img src="assets/technology/image-launch-vehicle-portrait.jpg" alt=""> 
+    <img src="assets/technology/image-launch-vehicle-landscape.jpg" style="display: none;" class="none" alt=""> 
+  
   </picture>
+</div>
 
+
+<div>
   <picture hidden id="space-image" class="techW">
    <img src="assets/technology/image-space-capsule-portrait.jpg" alt="">
   </picture>
+</div>
 
+<div>
   <picture hidden id="capsule-image" class="techW">
    <img src="assets/technology/image-spaceport-portrait.jpg" alt="">
   </picture>
+</div>
 
+</div>
 
     </main>
 </body>

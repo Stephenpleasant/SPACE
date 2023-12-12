@@ -152,14 +152,16 @@ select {
 .flow--space-small {
     --flow-space: .75rem;
 }
-
+.flow-small{
+    margin-left: 20px;
+}
 .container {
     padding-inline: 2em;
     margin-inline: auto;
     max-width: 80rem;
 }
 .win{
-    margin-top: 100px;
+    margin-bottom: 130px;
 }
 .rey{
     margin-bottom: 100px;
@@ -547,6 +549,25 @@ body {
     }
 } 
 
+/* Technology */
+
+.technology {
+    background-image: url(./assets/technology/background-technology-mobile.jpg);
+}
+
+@media (min-width: 35rem) {
+    .technology{
+        background-position: center center;
+        background-image: url(./assets/technology/background-technology-tablet.jpg);
+    }
+}
+
+@media (min-width: 45rem) {
+    .technology {
+        background-image: url(./assets/technology/background-technology-desktop.jpg);
+    }
+} 
+
 /* ----------------------------- */
 /* Layout                        */
 /* ----------------------------- */
@@ -636,7 +657,6 @@ body {
 
 /* technology layout */
 .grid-container--technology{
-    --flow-space: 2rem;
     grid-template-areas: 
         'title'
         'image'
@@ -682,16 +702,19 @@ body {
             'image';
     }
     
-    .grid-container--technology{
-        padding-bottom: 0;
+    .grid-container--technology{ 
+        grid-template-columns: 1fr;
         grid-template-areas: 
-            'title'
-            'content'
-            'tabs'
-            'image';
+        'title'
+        'content'
+        'tabs'
+        'image';
     }
-   
-}
+    .grid-container--technology > .none{
+        display: block;
+    }
+   }
+
 
 @media (min-width: 45em) {
     .grid-container {
@@ -750,8 +773,7 @@ body {
     }
       
     .grid-container--technology {
-        grid-template-columns: minmax(1rem, 1fr) repeat(2, minmax(0, 40rem)) minmax(1rem, 1fr);;
-        justify-items: start;
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
         grid-template-areas: 
             '. title  title .'
             '. content image .'
@@ -762,7 +784,8 @@ body {
     .grid-container--technology > picture{
         grid-column: span 2;
         align-self: end;
-        max-width: 70%;
+        max-width: 60%;
+        height: 20%;
     }
     .techW {
         margin-bottom: 2rem;
